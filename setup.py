@@ -1,7 +1,7 @@
 from distutils.core import setup
 setup(
   name='tuxanonymizer',
-  packages=['src'],   # Chose the same as "name"
+  packages=['tuxanonymizer'],   # Chose the same as "name"
   version='0.1',
   license='MIT',
   description='Customer file obfuscation library and cli',
@@ -13,7 +13,7 @@ setup(
   install_requires=[
       'xmltodict',
   ],
-  scripts=['src/anonymize.py'],
+  scripts=['bin/tuxanonymizer'],
   classifiers=[
     'Development Status :: 4 - Beta',
     'Intended Audience :: Developers',

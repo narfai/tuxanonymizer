@@ -1,7 +1,5 @@
 from collections import OrderedDict
 from random import choice
-from sys import argv
-from os import path
 import xml.dom.minidom
 import xmltodict
 import re
@@ -81,13 +79,3 @@ def anonymize_xml_file(file):
                 )
              )
         ).toprettyxml()
-
-
-def main(file_path):
-    if not path.exists(file_path):
-        raise Exception('{0} does not exists'.format(file_path))
-    print(anonymize_xml_file(file_path))
-
-
-if __name__ == '__main__':
-    main(argv[1])
