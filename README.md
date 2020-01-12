@@ -2,6 +2,7 @@
 
 Customer data obfuscation : generate anonymized file with sames structures and value format
 Currenty only supportes xml files.
+Note : obfuscation process skip dates
 
 ## Install
 
