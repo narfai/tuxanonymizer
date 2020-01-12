@@ -3,6 +3,7 @@ from random import choice
 import xml.dom.minidom
 import xmltodict
 import re
+from dateutil.parser import parse
 
 lower_ascii = 'abcdefghijklmnopqrstuvwxyz '
 upper_ascii = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ '
@@ -25,7 +26,18 @@ def randomize(value):
         return value
 
 
+def is_date(value):
+    try:
+        parse(value)
+        return True
+    except Exception as _:
+        return False
+
+
 def anonymize_value(value):
+    if is_date(value):
+        return value
+
     if isinstance(value, str):
         return ''.join([
             randomize(c) for c in value
