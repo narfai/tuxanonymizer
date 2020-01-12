@@ -45,9 +45,10 @@ print(
         xml_string
     )
 )
-``
+```
 
 Will output :
+
 ```
 {'MaBalise': {'@monAttribut': 'Cwbb442896383', '#text': 'Prmw771412734'}}
 ```
