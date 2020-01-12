@@ -4,8 +4,8 @@ import xml.dom.minidom
 import xmltodict
 import re
 
-lower_ascii = 'abcdefghijklmnopqrstuvwxyz'
-upper_ascii = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+lower_ascii = 'abcdefghijklmnopqrstuvwxyz '
+upper_ascii = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ '
 b_choice = [True, False]
 numbers = '123456789'
 
@@ -16,10 +16,7 @@ def randomize(value):
     if is_number.match(value) is not None:
         return choice(numbers)
     elif value == ' ':
-        if choice(b_choice):
-            return ' '
-        else:
-            return choice(lower_ascii+upper_ascii)
+        return choice(lower_ascii + upper_ascii)
     elif value.islower():
         return choice(lower_ascii)
     elif value.isupper():
